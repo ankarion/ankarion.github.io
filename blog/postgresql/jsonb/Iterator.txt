@@ -1,0 +1,14 @@
+Yep, you can easily iterate through the jsonb with this magical thing.
+Let's imagine that you have an incoming Jsonb:
+'{"1":"1","2":["2","2"],"3":3,"4":{"1":4}}'::jsonb
+(which is actually comming in JsonbContainer format)
+
+First of all, it is needed to initialize jsonb iterator. You can do it with the function:
+JsonbIterator *it = JsonbIteratorInit(jsonb);//where jsonb - is an incoming jsonb in *JsonbContainer format.
+
+Then, iterating through it will be as simple as cycle:
+for(JsonbIteratorToken r=JsonbIteratorNext(&it,&v,true),r!=WJB_DONE,r=JsonbIteratorNext(&it,&v,true))
+Looks scary, but actually this means that:
+we start iterating through an object with "r" equal to result of JsonbIteratorNext.
+So, what does this function do?
+JsonbIteratorNext gets iterator(&it) and puts next iteration element into v
