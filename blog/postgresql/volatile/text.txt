@@ -1,4 +1,0 @@
-Here I want to describe a litle about volatile in PostgreSQL.
-I will defenately define PostgreSQL processes, volatile in production like microprocessors
-and explain why I thought that it is strange to have volatile field in PostgreSQL.
-Comming up soon. ;)

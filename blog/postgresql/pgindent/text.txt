@@ -1,2 +1,0 @@
-These theme will cover an awesome tool called pg_indent in postgresql/src/tools/pgindent
-Actually, it was pretty hard for me to understand it, but usage is actually easy.
